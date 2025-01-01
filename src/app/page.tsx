@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Hero from "@/app/components/Hero";
+import { Skills } from "@/app/components/Skills";
+import { About } from "./components/About";
 
 export default function Home() {
   return (
-    <main className="text-6xl">
-      <h1>Tes</h1>
-    </main>
+    <>
+      <Hero />
+      <About />
+      <Skills />
+    </>
   );
 }
