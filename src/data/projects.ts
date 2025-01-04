@@ -148,6 +148,7 @@ export const projects: Project[] = [
       "/images/projects/nutricam/scan-result.webp",
       "/images/projects/nutricam/statistics.webp",
     ],
+    thumbnail: "/images/projects/nutricam/thumbnail.webp",
   },
   {
     id: 5,
@@ -172,6 +173,7 @@ export const projects: Project[] = [
       "/images/projects/careific/routine.webp",
       "/images/projects/careific/login.webp",
     ],
+    thumbnail: "/images/projects/careific/thumbnail.webp",
   },
   {
     id: 6,
@@ -383,6 +385,7 @@ export const projects: Project[] = [
       "/images/projects/unexposed/turn.webp",
       "/images/projects/unexposed/vote.webp",
     ],
+    thumbnail: "/images/projects/unexposed/thumbnail.webp",
   },
   {
     id: 14,
@@ -403,5 +406,6 @@ export const projects: Project[] = [
       "/images/projects/trashify/scan.webp",
       "/images/projects/trashify/scan-result.webp",
     ],
+    thumbnail: "/images/projects/trashify/thumbnail.webp",
   },
 ];

@@ -6,9 +6,10 @@ import Image from "next/image";
 import { IconX } from "@tabler/icons-react";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 import { HoverBorderGradient } from "@/components/partials/HoverBorderGradient";
+import { Project } from "@/types/Project";
 
 export default function PortfolioDetail({
   params,
@@ -16,14 +17,24 @@ export default function PortfolioDetail({
   params: { id: string };
 }) {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [project, setProject] = useState<Project>();
+  const [componentLoading, setComponentLoading] = useState(true);
 
-  const id = parseInt(params.id);
-  if (id > 14) {
-    window.location.href = "/404";
-    return;
-  }
+  useEffect(() => {
+    if (parseInt(params.id) > 14) {
+      window.location.href = "/404";
+      return;
+    }
 
-  const project = projects.find((project) => project.id === id);
+    const foundProject = projects.find(
+      (project) => project.id === parseInt(params.id)
+    );
+    setProject(foundProject);
+
+    setComponentLoading(false);
+  }, [params.id]);
+
+  if (componentLoading) return <div className="min-h-screen" />;
 
   return (
     <>
@@ -59,11 +70,15 @@ export default function PortfolioDetail({
           }
         >
           <Image
-            src={project?.images[0] || ""}
+            src={
+              project?.thumbnail ? project.thumbnail : project?.images[0] || ""
+            }
             alt="hero"
             height={720}
             width={1400}
-            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+            className={`mx-auto rounded-2xl object-cover h-full ${
+              !project?.thumbnail && "object-top"
+            }`}
             draggable={false}
           />
         </ContainerScroll>

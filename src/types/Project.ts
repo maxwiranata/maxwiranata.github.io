@@ -10,6 +10,7 @@ export type Project = {
   summaryTitle: string;
   summaryDescription: string;
   images: string[];
+  thumbnail?: string;
 };
 
 type TechStack = {

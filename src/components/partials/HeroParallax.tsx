@@ -13,19 +13,13 @@ import Link from "next/link";
 import { FlipWords } from "./FlipWords";
 import { HoverBorderGradient } from "./HoverBorderGradient";
 import { MdDownload } from "react-icons/md";
+import { projects } from "@/data/projects";
+import { Project } from "@/types/Project";
 
-export const HeroParallax = ({
-  products,
-}: {
-  products: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
-}) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+export const HeroParallax = () => {
+  const firstRow = projects.slice(0, 5).reverse();
+  const secondRow = projects.slice(5, 10);
+  const thirdRow = projects.slice(10, 15).reverse();
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -47,7 +41,7 @@ export const HeroParallax = ({
     springConfig
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.15], [0.15, 1]),
     springConfig
   );
   const rotateZ = useSpring(
@@ -72,36 +66,36 @@ export const HeroParallax = ({
           opacity,
         }}
       >
-        <h3 className="text-2xl lg:text-3xl font-bold dark:text-white text-black ml-4 md:ml-16 xl:ml-28">
+        <h3 className="text-2xl lg:text-3xl font-bold text-white ml-4 md:ml-16 xl:ml-28">
           My Projects
         </h3>
-        <p className="text-sm md:text-base text-gray-500 dark:text-neutral-500 mt-1 ml-4 md:ml-16 xl:ml-28 mb-8">
+        <p className="text-sm md:text-base text-neutral-500 mt-1 ml-4 md:ml-16 xl:ml-28 mb-8">
           A glimpse into what I&apos;ve created
         </p>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-12 mb-12">
-          {firstRow.map((product) => (
-            <ProductCard
-              product={product}
+          {firstRow.map((project) => (
+            <ProjectCard
+              project={project}
               translate={translateX}
-              key={product.title}
+              key={project.id}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row space-x-12 mb-12">
-          {secondRow.map((product) => (
-            <ProductCard
-              product={product}
+          {secondRow.map((project) => (
+            <ProjectCard
+              project={project}
               translate={translateXReverse}
-              key={product.title}
+              key={project.id}
             />
           ))}
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-12">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
+          {thirdRow.map((project) => (
+            <ProjectCard
+              project={project}
               translate={translateX}
-              key={product.title}
+              key={project.id}
             />
           ))}
         </motion.div>
@@ -151,15 +145,11 @@ export const Header = () => {
   );
 };
 
-export const ProductCard = ({
-  product,
+export const ProjectCard = ({
+  project,
   translate,
 }: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
+  project: Project;
   translate: MotionValue<number>;
 }) => {
   return (
@@ -170,24 +160,26 @@ export const ProductCard = ({
       whileHover={{
         y: -8,
       }}
-      key={product.title}
+      key={project.title}
       className="group/product h-48 w-[20rem] relative flex-shrink-0"
     >
       <Link
-        href={product.link}
+        href={`/projects/${project.id}`}
         className="block group-hover/product:shadow-2xl"
       >
         <Image
-          src={product.thumbnail}
+          src={project.thumbnail ? project.thumbnail : project.images[0]}
           height="600"
           width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
+          className={`object-cover ${
+            !project.thumbnail && "object-top"
+          } absolute h-full w-full inset-0`}
+          alt={project.title}
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none transition-all"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
+        {project.title}
       </h2>
     </motion.div>
   );
