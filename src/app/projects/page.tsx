@@ -16,7 +16,7 @@ export default function Projects() {
             title={project.title}
             description={project.description}
             href={`/projects/${project.id}`}
-            image={project.images[0]}
+            image={project.thumbnail ? project.thumbnail : project.images[0]}
             icons={project.techStack.map((tech) => tech.icon)}
           />
         ))}
