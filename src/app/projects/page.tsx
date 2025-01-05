@@ -10,7 +10,7 @@ export default function Projects() {
         </h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-8 max-w-3xl lg:max-w-6xl mx-auto md:min-h-[440vh] lg:min-h-[240vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-8 max-w-3xl lg:max-w-6xl mx-auto md:min-h-[440vh] lg:min-h-[240vh] 2xl:min-h-[125vh]">
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
