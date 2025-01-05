@@ -175,6 +175,7 @@ export const ProjectCard = ({
             !project.thumbnail && "object-top"
           } absolute h-full w-full inset-0`}
           alt={project.title}
+          priority
         />
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none transition-all"></div>

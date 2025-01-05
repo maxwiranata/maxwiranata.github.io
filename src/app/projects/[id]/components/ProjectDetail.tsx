@@ -76,6 +76,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               !project?.thumbnail && "object-top"
             }`}
             draggable={false}
+            priority
           />
         </ContainerScroll>
       </section>
@@ -115,25 +116,47 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 pt-4 md:pt-2">
             Gallery
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {project?.images.map((image, index) => (
-              <motion.div
-                key={index}
-                layoutId={`image-${index}`}
-                onClick={() => setSelectedImage(index)}
-                className="relative aspect-video cursor-pointer overflow-hidden rounded-lg"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Image
-                  src={image}
-                  alt={`Gallery image ${index + 1}`}
-                  fill
-                  className="object-cover object-top"
-                />
-              </motion.div>
-            ))}
-          </div>
+          {project?.techStack.some((tech) => tech.name !== "SwiftUI") ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {project?.images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  layoutId={`image-${index}`}
+                  onClick={() => setSelectedImage(index)}
+                  className="relative aspect-video cursor-pointer overflow-hidden rounded-lg"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Image
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {project?.images.map((image, index) => (
+                <motion.div
+                  key={index}
+                  layoutId={`image-${index}`}
+                  onClick={() => setSelectedImage(index)}
+                  className="relative cursor-pointer overflow-hidden rounded-lg"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Image
+                    src={image}
+                    alt={`Gallery image ${index + 1}`}
+                    width={400}
+                    height={600}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          )}
 
           <AnimatePresence>
             {selectedImage !== null && (
@@ -158,7 +181,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                     />
                     <button
                       onClick={() => setSelectedImage(null)}
-                      className="absolute top-0 right-4 p-2 text-white bg-black/50 rounded-full"
+                      className="absolute top-0 right-0 p-2 text-white bg-black rounded-full"
                     >
                       <IconX size={28} />
                     </button>

@@ -32,6 +32,7 @@ export default function ProjectCard({
           className="w-full h-auto mt-6 mb-8 aspect-video object-cover object-top rounded-md"
           width={400}
           height={200}
+          priority
         />
         <div className="flex items-center gap-x-4 text-white">
           {icons.map((Icon, index) => (

@@ -78,6 +78,7 @@ export const AboutMe = () => {
                   height={500}
                   draggable={false}
                   className="h-64 lg:h-96 w-auto rounded-3xl object-cover object-center aspect-square"
+                  priority
                 />
               </motion.div>
             ))}

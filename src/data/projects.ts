@@ -391,20 +391,23 @@ export const projects: Project[] = [
     id: 14,
     title: "Trashify AI",
     description: "Swift Student Challenge 2024 Submission",
-    shortSummary: "",
+    shortSummary:
+      "Trashify AI is a trash classification app using computer vision, helping users sort waste easily while promoting eco-friendly habits through interactive learning.",
     techStack: [
       {
         name: "SwiftUI",
         icon: GrSwift,
       },
     ],
-    summaryTitle: "",
-    summaryDescription: "",
+    summaryTitle:
+      "A Highly Valuable Learning Experience despite not Winning the Competition",
+    summaryDescription:
+      "Participating in the Swift Student Challenge was an incredibly rewarding experience that provided valuable insights and inspiration. Through this challenge, I honed my skills in app ideation and learned how to effectively leverage Apple technologies to solve real-world problems. The app I developed exceeded my expectations, achieving both functionality and user engagement goals. While I didn't win the competition, I'm proud of the app's success and deeply satisfied with the knowledge and growth I gained throughout the journey.",
     images: [
-      "/images/projects/trashify/start.webp",
-      "/images/projects/trashify/game.webp",
       "/images/projects/trashify/scan.webp",
       "/images/projects/trashify/scan-result.webp",
+      "/images/projects/trashify/start.webp",
+      "/images/projects/trashify/game.webp",
     ],
     thumbnail: "/images/projects/trashify/thumbnail.webp",
   },
