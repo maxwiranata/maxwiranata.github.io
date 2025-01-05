@@ -89,7 +89,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             {project?.techStack.map((tech, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center flex-shrink-0 mr-8"
+                className="flex flex-col items-center flex-shrink-0 mr-6 md:mr-8 text-sm md:text-base"
               >
                 <tech.icon
                   size={48}

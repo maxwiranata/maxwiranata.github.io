@@ -132,7 +132,7 @@ export const Header = () => {
         experiences. I thrive on turning complex ideas into elegant solutions
         that inspire and engage users.
       </div>
-      <a href="/pdf/cv.pdf" download>
+      <a href="/pdf/Maximus Aurelius Wiranata - CV.pdf" download>
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"
