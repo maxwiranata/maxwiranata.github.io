@@ -43,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`overflow-x-hidden ${inter.className}`}>
+    <html lang="en" suppressHydrationWarning className="bg-neutral-950">
+      <body className={`overflow-x-hidden bg-neutral-950 ${inter.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
