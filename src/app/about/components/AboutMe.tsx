@@ -110,7 +110,7 @@ export const AboutMe = () => {
             <p className="text-sm md:text-base lg:text-lg text-gray-500 dark:text-neutral-500">
               Maximus Aurelius Wiranata
             </p>
-            <motion.p className="text-sm lg:text-base xl:text-lg text-gray-500 mt-4 md:mt-8 dark:text-neutral-300">
+            <motion.p className="text-sm lg:text-base xl:text-lg mt-4 md:mt-8 text-neutral-300">
               {"I'm Maximus Aurelius Wiranata, a Full-Stack Developer, UI/UX Designer, and iOS Developer with a Bachelor's degree in Computer Science and over 3 years of professional experience. My journey in the tech industry has been driven by a passion for combining technology and creativity to solve complex problems and deliver meaningful digital solutions. In my career, I have worked on a variety of projects, including building scalable web applications, designing user-friendly interfaces, and developing cutting-edge iOS applications. My approach integrates strong technical expertise with a focus on usability and aesthetics, ensuring that each product is both functional and visually engaging. Beyond development and design, I'm dedicated to continuous learning and staying ahead of industry trends, enabling me to bring innovative ideas and fresh perspectives to every project. I thrive on collaboration and problem-solving, always striving to create technology that inspires and empowers users."
                 .split(" ")
                 .map((word, index) => (
@@ -126,7 +126,7 @@ export const AboutMe = () => {
                       opacity: 1,
                       y: 0,
                     }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true }}
                     transition={{
                       duration: 0.2,
                       ease: "easeInOut",
