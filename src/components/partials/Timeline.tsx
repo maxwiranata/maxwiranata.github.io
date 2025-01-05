@@ -34,10 +34,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-10">
-        <h3 className="text-2xl lg:text-3xl font-bold dark:text-white text-black">
+        <h3 className="text-2xl lg:text-3xl font-bold text-white">
           Changelog from My Journey
         </h3>
-        <p className="text-sm md:text-base text-gray-500 dark:text-neutral-500 mt-1">
+        <p className="text-sm md:text-base text-neutral-500 mt-1">
           I&apos;ve been working as a Software Developer for the past 3 years.
           Here&apos;s a timeline of my journey.
         </p>

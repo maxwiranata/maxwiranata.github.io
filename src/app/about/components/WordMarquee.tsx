@@ -33,8 +33,8 @@ const WordMarquee = forwardRef<HTMLDivElement, Props>(
             </div>
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute top-0 z-10 h-[-webkit-fill-available] w-full bg-gradient-to-r from-transparent from-70% to-neutral-950" />
-        <div className="pointer-events-none absolute top-0 z-10 h-[-webkit-fill-available] w-full bg-gradient-to-l from-transparent from-70% to-neutral-950" />
+        <div className="pointer-events-none absolute top-0 z-10 h-[28px] w-full bg-gradient-to-r from-transparent from-70% to-neutral-950" />
+        <div className="pointer-events-none absolute top-0 z-10 h-[28px] w-full bg-gradient-to-l from-transparent from-70% to-neutral-950" />
       </section>
     );
   }
