@@ -1,11 +1,10 @@
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaNodeJs, FaReact, FaSketch } from "react-icons/fa";
+import { FaNodeJs, FaReact, FaSketch, FaVuejs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
   SiExpress,
   SiMongodb,
   SiNextdotjs,
-  SiShadcnui,
   SiTypescript,
 } from "react-icons/si";
 import { CgFigma } from "react-icons/cg";
@@ -19,6 +18,10 @@ export const skills = [
   {
     title: "React",
     icon: FaReact,
+  },
+  {
+    title: "Vue",
+    icon: FaVuejs,
   },
   {
     title: "Typescript",
@@ -35,10 +38,6 @@ export const skills = [
   {
     title: "Node.js",
     icon: FaNodeJs,
-  },
-  {
-    title: "Shadcn",
-    icon: SiShadcnui,
   },
   {
     title: "PostgreSQL",
