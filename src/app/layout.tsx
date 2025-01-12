@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import { TracingBeam } from "@/components/partials/TracingBeam";
 import { ThemeProvider } from "@/components/partials/ThemeProvider";
-import { Navbar } from "@/components/layout/Navbar";
 import { siteConfig } from "@/constant/config";
+import MainLayout from "@/components/layout/MainLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,10 +51,7 @@ export default function RootLayout({
           disableTransitionOnChange
           forcedTheme="dark"
         >
-          <main className="relative w-full flex items-center justify-center dark">
-            <Navbar className="top-1 md:top-2" />
-            <TracingBeam>{children}</TracingBeam>
-          </main>
+          <MainLayout>{children}</MainLayout>
         </ThemeProvider>
       </body>
     </html>
