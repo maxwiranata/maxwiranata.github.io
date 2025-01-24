@@ -200,7 +200,7 @@ export const projects: Project[] = [
     summaryTitle:
       "User-friendly and Effortlessly Guiding Visitors to View the Documentation",
     summaryDescription:
-      "Unit Network's landing page is a sleek introduction to a revolutionary blockchain platform. It effectively encapsulates the network’s core functionalities, offering a user-friendly interface that guarantees a seamless experience for developers and users alike. The page communicates Unit Network’s mission of decentralization, scalability, and innovation, spotlighting key features such as token creation, smart contract deployment, scalability solutions, and governance. Unit Network's landing page serves as an engaging invitation to join a transformative journey toward a decentralized and connected digital economy.",
+      "Unit Network's landing page is a sleek introduction to a revolutionary blockchain platform. It effectively encapsulates the network's core functionalities, offering a user-friendly interface that guarantees a seamless experience for developers and users alike. The page communicates Unit Network's mission of decentralization, scalability, and innovation, spotlighting key features such as token creation, scalability solutions, and governance. Unit Network's landing page serves as an engaging invitation to join a transformative journey toward a decentralized and connected digital economy.",
     images: [
       "/images/projects/unit-docs/home.webp",
       "/images/projects/unit-docs/connect.webp",
