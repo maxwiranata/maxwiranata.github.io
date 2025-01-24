@@ -40,7 +40,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             <>
               <h1 className="text-lg md:text-3xl font-medium text-white px-2 md:px-0">
                 {project?.description} <br />
-                <span className="text-4xl md:text-6xl lg:text-7xl font-bold mt-1 leading-none px-2 md:px-0">
+                <span className="text-4xl md:text-6xl lg:text-7xl font-bold leading-none px-2 md:px-0">
                   {project?.title}
                 </span>
               </h1>
@@ -58,7 +58,9 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                     as="button"
                     className="bg-black text-white"
                   >
-                    <Link href={project.link}>Open Live Site</Link>
+                    <Link href={project.link} target="_blank">
+                      Open Live Site
+                    </Link>
                   </HoverBorderGradient>
                 </div>
               )}

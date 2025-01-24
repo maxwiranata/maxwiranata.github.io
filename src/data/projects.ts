@@ -3,7 +3,12 @@ import { FaBootstrap, FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
 import { GrSwift } from "react-icons/gr";
 import { IoLogoCss3 } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiPolkadot, SiTypescript } from "react-icons/si";
+import {
+  SiDocusaurus,
+  SiNextdotjs,
+  SiPolkadot,
+  SiTypescript,
+} from "react-icons/si";
 
 export const projects: Project[] = [
   {
@@ -177,27 +182,30 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Careific Website",
-    description: "Careific App Landing Page",
+    title: "Unit Network Docs",
+    description: "Unit Network Landing Page and Documentation Website",
     shortSummary:
-      "Introducing our all-encompassing Caregiving App, a complete solution prioritizing your loved ones' well-being.",
+      "Discover Unit Network, the ultimate platform for creating, managing, and scaling tokenized ecosystems.",
+    link: "https://unit.network",
     techStack: [
       {
-        name: "HTML",
-        icon: FaHtml5,
+        name: "React.js",
+        icon: FaReact,
       },
       {
-        name: "TailwindCSS",
-        icon: RiTailwindCssFill,
+        name: "Docusaurus",
+        icon: SiDocusaurus,
       },
     ],
     summaryTitle:
-      "User-friendly and Effortlessly Guiding Visitors to View The Information",
+      "User-friendly and Effortlessly Guiding Visitors to View the Documentation",
     summaryDescription:
-      "Careific's landing page is a streamlined introduction to a groundbreaking healthcare solution. It adeptly encapsulates the app's core functionality, presenting a user-friendly interface that promises a seamless healthcare experience. The page efficiently communicates Careific's mission of accessibility and innovation, highlighting features like tracker, emergencies, ai-consultation, routines, and walkie-talkie. Careific's landing page serves as a compelling invitation, signaling a transformative journey toward accessible and connected healthcare.",
+      "Unit Network's landing page is a sleek introduction to a revolutionary blockchain platform. It effectively encapsulates the network’s core functionalities, offering a user-friendly interface that guarantees a seamless experience for developers and users alike. The page communicates Unit Network’s mission of decentralization, scalability, and innovation, spotlighting key features such as token creation, smart contract deployment, scalability solutions, and governance. Unit Network's landing page serves as an engaging invitation to join a transformative journey toward a decentralized and connected digital economy.",
     images: [
-      "/images/projects/careific-website/home.webp",
-      "/images/projects/careific-website/about.webp",
+      "/images/projects/unit-docs/home.webp",
+      "/images/projects/unit-docs/connect.webp",
+      "/images/projects/unit-docs/docs.webp",
+      "/images/projects/unit-docs/about.webp",
     ],
   },
   {
