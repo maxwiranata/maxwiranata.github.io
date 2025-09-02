@@ -116,7 +116,12 @@ export const HeroParallax = () => {
 };
 
 export const Header = () => {
-  const words = ["Fullstack-Developer", "iOS-Developer", "UI/UX-Designer"];
+  const words = [
+    "Frontend-Developer",
+    "Fullstack-Developer",
+    "iOS-Developer",
+    "UI/UX-Designer",
+  ];
 
   return (
     <section className="max-w-7xl relative mx-auto pt-16 sm:pt-28 pb-32 px-4 md:px-12 xl:px-4 w-full left-0 top-0 z-50">
@@ -127,10 +132,9 @@ export const Header = () => {
         <FlipWords words={words} />
       </h1>
       <div className="max-w-xl my-6 text-neutral-200 text-sm md:text-base">
-        I&apos;m a passionate Full-Stack Developer, UI/UX Designer, and iOS
-        Developer dedicated to creating innovative and user-friendly digital
-        experiences. I thrive on turning complex ideas into elegant solutions
-        that inspire and engage users.
+        I&apos;m a passionate Software Developer dedicated to creating
+        innovative and user-friendly digital experiences. I thrive on turning
+        complex ideas into elegant solutions that inspire and engage users.
       </div>
       <a href="/pdf/Maximus Aurelius Wiranata - CV.pdf" download>
         <HoverBorderGradient
