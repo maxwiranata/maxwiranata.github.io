@@ -23,6 +23,7 @@ export const projects: Project[] = [
     description: "Enterprise-scale AI agent workflow platform",
     shortSummary:
       "IntentAI enables organizations to build, integrate, and manage enterprise-grade AI agent workflows to deliver GenAI solutions faster, more efficiently, and at lower cost.",
+    link: "https://intentai.com",
     techStack: [
       {
         name: "Vue.js",
