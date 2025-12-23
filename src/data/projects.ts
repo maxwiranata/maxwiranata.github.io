@@ -1,5 +1,11 @@
 import { Project } from "@/types/Project";
-import { FaBootstrap, FaHtml5, FaLaravel, FaReact } from "react-icons/fa";
+import {
+  FaBootstrap,
+  FaHtml5,
+  FaLaravel,
+  FaReact,
+  FaVuejs,
+} from "react-icons/fa";
 import { GrSwift } from "react-icons/gr";
 import { IoLogoCss3 } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -13,6 +19,35 @@ import {
 export const projects: Project[] = [
   {
     id: 0,
+    title: "IntentAI Landing Page",
+    description: "Enterprise-scale AI agent workflow platform",
+    shortSummary:
+      "IntentAI enables organizations to build, integrate, and manage enterprise-grade AI agent workflows to deliver GenAI solutions faster, more efficiently, and at lower cost.",
+    techStack: [
+      {
+        name: "Vue.js",
+        icon: FaVuejs,
+      },
+      {
+        name: "TailwindCSS",
+        icon: RiTailwindCssFill,
+      },
+    ],
+    summaryTitle:
+      "Enterprise AI Agent Workflows Built for Scale and Performance",
+    summaryDescription:
+      "IntentAI is a web platform designed to support enterprise-scale AI agent workflows, allowing teams to design, deploy, and manage GenAI solutions through an intuitive interface. The landing page effectively communicates the platform’s value proposition, capabilities, and use cases, while maintaining performance and accessibility for a growing user base.",
+    images: [
+      "/images/projects/intent-website/home.webp",
+      "/images/projects/intent-website/about.webp",
+      "/images/projects/intent-website/solution.webp",
+      "/images/projects/intent-website/blog.webp",
+      "/images/projects/intent-website/blog-detail.webp",
+      "/images/projects/intent-website/contact-us.webp",
+    ],
+  },
+  {
+    id: 1,
     title: "Animal Astronauts",
     description: "NFT's by Unit Network",
     shortSummary:
@@ -41,7 +76,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 1,
+    id: 2,
     title: "Unit Ventures",
     description: "Blockchain Business Landing Page",
     shortSummary:
@@ -72,7 +107,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Unit Club",
     description: "Unit Network's exclusive membership",
     shortSummary:
@@ -101,7 +136,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Unit App",
     description: "Unit Network's Blockchain Exchange Web App",
     shortSummary:
@@ -132,7 +167,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "NutriCam",
     description: "Apple Developer Academy 4rd Challenge",
     shortSummary:
@@ -156,7 +191,7 @@ export const projects: Project[] = [
     thumbnail: "/images/projects/nutricam/thumbnail.webp",
   },
   {
-    id: 5,
+    id: 6,
     title: "Careific",
     description: "Apple Developer Academy Macro Challenge",
     shortSummary:
@@ -181,7 +216,7 @@ export const projects: Project[] = [
     thumbnail: "/images/projects/careific/thumbnail.webp",
   },
   {
-    id: 6,
+    id: 7,
     title: "Unit Network Docs",
     description: "Unit Network Landing Page and Documentation Website",
     shortSummary:
@@ -209,7 +244,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Artealogic",
     description: "Design Studio Landing Page",
     shortSummary:
@@ -235,7 +270,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Horizon",
     description: "Ciputra University Orientation Week 2022 Official Website",
     shortSummary:
@@ -263,7 +298,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Elevate",
     description: "Ciputra University Orientation Week 2021 Official Website",
     shortSummary:
@@ -289,7 +324,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: "SABA Student Assistant",
     description: "On-site Course Marketplace Website",
     shortSummary:
@@ -314,7 +349,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     title: "Kukoki",
     description: "Meal Kit Marketplace Website",
     shortSummary:
@@ -342,31 +377,6 @@ export const projects: Project[] = [
       "/images/projects/kukoki/rencana.webp",
       "/images/projects/kukoki/menu.webp",
       "/images/projects/kukoki/menu-detail.webp",
-    ],
-  },
-  {
-    id: 12,
-    title: "9th NPLC",
-    description: "Programming Competition Website",
-    shortSummary:
-      "The Informatics major in Universitas Ciputra hosts the NPLC every year as a programming and mathematical logic competition. Forest is the subject of the ninth NPLC.",
-    techStack: [
-      {
-        name: "Laravel",
-        icon: FaLaravel,
-      },
-      {
-        name: "TailwindCSS",
-        icon: RiTailwindCssFill,
-      },
-    ],
-    summaryTitle:
-      "The Website Has Been Used Successfully By Hundreds of Registered Participants, Despite Hosting Issues",
-    summaryDescription:
-      "In over of 300 users have utilized this website successfully. Although this website is simple to use, there is a hosting issue where the storage is insufficient, necessitating a separate payment confirmation on the Google form. According to this website's review, the registration process should exclusively take place there and shouldn't involve any other platforms.",
-    images: [
-      "/images/projects/nplc/home.webp",
-      "/images/projects/nplc/register.webp",
     ],
   },
   {

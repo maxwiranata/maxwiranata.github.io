@@ -4,7 +4,44 @@ import Image from "next/image";
 export const Experiences = () => {
   const data = [
     {
-      title: "Mar 2024 - Present",
+      title: "Jan 2025 - Present",
+      content: (
+        <div>
+          <p className="text-white text-base lg:text-lg font-semibold">
+            Frontend Developer at IntentAI
+          </p>
+          <ul className="text-neutral-300 text-sm lg:text-base list-disc mt-2 mb-6 ml-4">
+            <li>
+              Crafting interactive and visually appealing enterprise-scale AI
+              agent workflow platform using Vue.js, Tailwind, and TypeScript.
+            </li>
+            <li>
+              Implementing UI/UX design principle to develop enterprise-scale AI
+              agent workflow platform, striving to optimal user experience and
+              interface functionality.
+            </li>
+          </ul>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <Image
+              src="/images/projects/intent-website/home.webp"
+              alt="startup template"
+              width={400}
+              height={400}
+              className="rounded-lg object-cover object-top h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <Image
+              src="/images/projects/intent-website/solution.webp"
+              alt="startup template"
+              width={400}
+              height={400}
+              className="rounded-lg object-cover object-top h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Mar 2024 - Dec 2025",
       content: (
         <div>
           <p className="text-white text-base lg:text-lg font-semibold">
